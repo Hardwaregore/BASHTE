@@ -29,6 +29,7 @@ do
     elif [ "$store" = ":wq" ]
     then
         cat tempfile.txt >> $file
+        rm -rf tempfile.txt
         break
     elif [ "$store" = ":q!" ]
     then
