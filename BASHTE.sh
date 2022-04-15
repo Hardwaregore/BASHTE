@@ -20,20 +20,21 @@ echo "###########################################################"
 while true
 do
     read -p ">" store
-    if [ "$store" = ":q" ]
+    if [ "$store" = "\\:q" "\\"]
     then
         break
-    elif [ "$store" = ":w" ]
+    elif [ "$store" = "\\:w" ]
     then
         cat tempfile.txt >> $file
-    elif [ "$store" = ":wq" ]
+    elif [ "$store" = "\\:wq" ]
     then
         cat tempfile.txt >> $file
         rm -rf tempfile.txt
         break
-    elif [ "$store" = ":q!" ]
+    elif [ "$store" = "\\:q!" ]
     then
         rm -rf tempfile.txt
+        rm -rf $file
         break
     else
         echo $store >> tempfile.txt
