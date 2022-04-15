@@ -15,30 +15,28 @@ echo "#  :wq = Write and quit  :q! = quit and discard           #"
 echo "###########################################################"
 
 
-read -p ">" store
-# stores store in file
-echo $store >> tempfile.txt
-read -p ">" store
-echo $store >> tempfile.txt
-read -p ">" store
-echo $store >> tempfile.txt
-read -p ">" store
-echo $store >> tempfile.txt
-read -p ">" store
-echo $store >> tempfile.txt
-read -p ">" store
-echo $store >> tempfile.txt
-read -p ">" store
-echo $store >> tempfile.txt
-read -p ">" store
-echo $store >> tempfile.txt
-read -p ">" store
-echo $store >> tempfile.txt
-read -p ">" store
-echo $store >> tempfile.txt
-read -p ">" store
-echo $store >> tempfile.txt
-read -p ">" store
-echo $store >> tempfile.txt
 
- cat tempfile.txt >> $file
+# Detects if user presses the delete key
+while true
+do
+    read -p ">" store
+    if [ "$store" = ":q" ]
+    then
+        break
+    elif [ "$store" = ":w" ]
+    then
+        cat tempfile.txt >> $file
+    elif [ "$store" = ":wq" ]
+    then
+        cat tempfile.txt >> $file
+        break
+    elif [ "$store" = ":q!" ]
+    then
+        break
+    else
+        echo $store >> tempfile.txt
+    fi
+done
+
+
+
