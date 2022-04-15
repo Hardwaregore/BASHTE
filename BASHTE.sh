@@ -33,6 +33,7 @@ do
         break
     elif [ "$store" = ":q!" ]
     then
+        rm -rf tempfile.txt
         break
     else
         echo $store >> tempfile.txt
