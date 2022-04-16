@@ -18,7 +18,7 @@ echo "################################################################"
 
 
 while true
-do  lines=$(wc -l tempfile.txt)
+do  lines=$(wc -l tempfile.txt | cut -d " " -f 1)
     read -p "$lines >" store
     if [ "$store" = "\\:q" ]
     then
@@ -41,8 +41,15 @@ do  lines=$(wc -l tempfile.txt)
     fi
 done
 
-# counts the number of lines in the file
-lines=$(wc -l tempfile.txt)
+
+
+
+
+
+
+
+
+
 
 
 
