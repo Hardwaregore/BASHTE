@@ -1,4 +1,5 @@
 #!/bin/bash
+# Ripoff vim
 clear
 echo "###############################################################################"
 echo "#  BASHTE TEXT EDITOR -  \\\ = interupt  :q = quit  :w = write                 #"
