@@ -16,7 +16,7 @@ echo "##########################################################################
 
 
 while true
-do  lines=$(cd BASHTE && ls -1 | wc -l && cd ..)
+do  
     read -p "$lines >" store
     if [ "$store" = "\\:q" ]
     then
@@ -37,6 +37,8 @@ do  lines=$(cd BASHTE && ls -1 | wc -l && cd ..)
     else
 
         echo $store >> BASHTE/$lines.txt
+        # counts the number of times the while loop is run
+        ((lines++))
     fi
 done
 
