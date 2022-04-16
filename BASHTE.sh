@@ -16,7 +16,7 @@ echo "##########################################################################
 
 
 while true
-do  lines=$(wc -l .BASHTE)
+do  lines=$(cd BASHTE && ls -1 | wc -l && cd ..)
     read -p "$lines >" store
     if [ "$store" = "\\:q" ]
     then
@@ -35,8 +35,8 @@ do  lines=$(wc -l .BASHTE)
         rm -rf $file
         break
     else
-        echo $store >> .$file
-        cat .BASHTE >> BASHTE
+
+        echo $store >> BASHTE/$lines.txt
     fi
 done
 
@@ -46,6 +46,9 @@ done
 
 
 # | cut -d " " -f 1
+
+# counts the amount of files in the directory
+ls -1 | wc -l
 
 
 
