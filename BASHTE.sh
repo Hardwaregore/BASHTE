@@ -7,7 +7,7 @@ echo "##########################################################################
 echo ""
 read -p "Enter file name: " file
 touch $file
-touch .BASHTE/MASTER/BASHTE
+touch .BASHTE
 clear
 echo "###############################################################################"
 echo "#  BASHTE TEXT EDITOR -  \\\ = interupt  :q = quit  :w = write.               #"
@@ -17,7 +17,7 @@ echo "##########################################################################
 
 
 while true
-do  lines=$(wc -l .BASHTE/MASTER/BASHTE)
+do  lines=$(wc -l .BASHTE)
     read -p "$lines >" store
     if [ "$store" = "\\:q" ]
     then
@@ -28,7 +28,7 @@ do  lines=$(wc -l .BASHTE/MASTER/BASHTE)
     elif [ "$store" = "\\:wq" ]
     then
         cat tempfile.txt >> $file
-        rm -rf tempfile.txt
+        rm -rf .BASHTE
         break
     elif [ "$store" = "\\:q!" ]
     then
