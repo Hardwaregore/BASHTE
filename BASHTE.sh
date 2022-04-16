@@ -27,16 +27,16 @@ do  lines=$(wc -l .BASHTE)
         cat .BASHTE/* >> $file
     elif [ "$store" = "\\:wq" ]
     then
-        cat tempfile.txt >> $file
+        cat .BASHTE >> $file
         rm -rf .BASHTE
         break
     elif [ "$store" = "\\:q!" ]
     then
-        rm -rf tempfile.txt
+        rm -rf .BASHTE
         rm -rf $file
         break
     else
-        echo $store >> tempfile.txt
+        echo $store >> .BASHTE
     fi
 done
 
