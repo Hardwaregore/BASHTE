@@ -7,6 +7,7 @@ echo "##########################################################################
 echo ""
 read -p "Enter file name: " file
 touch .$file
+mkdir BASHTE
 clear
 echo "###############################################################################"
 echo "#  BASHTE TEXT EDITOR -  \\\ = interupt  :q = quit  :w = write                 #"
