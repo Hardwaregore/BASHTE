@@ -1,7 +1,7 @@
 #!/bin/bash
 clear
 echo "###############################################################################"
-echo "#  BASHTE TEXT EDITOR -  \\\ = interupt  :q = quit  :w = write.                #"
+echo "#  BASHTE TEXT EDITOR -  \\\ = interupt  :q = quit  :w = write                #"
 echo "#  :wq = Write and quit  :q! = quit and discard  :dd = Delete Previous line   #"
 echo "###############################################################################"
 echo ""
@@ -10,7 +10,7 @@ touch $file
 touch .BASHTE
 clear
 echo "###############################################################################"
-echo "#  BASHTE TEXT EDITOR -  \\\ = interupt  :q = quit  :w = write.               #"
+echo "#  BASHTE TEXT EDITOR -  \\\ = interupt  :q = quit  :w = write                #"
 echo "#  :wq = Write and quit  :q! = quit and discard  :dd = Delete Previous line   #"
 echo "###############################################################################"
 
