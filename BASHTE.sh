@@ -39,7 +39,7 @@ do
     elif [ "$store" = "\\:dd" ]
     then
     LinesMinusOne=$(expr $lines - 1)
-    rm -rf BASHTE/$LinesMinusOne
+    rm -rf BASHTE/$LinesMinusOne.txt
     else
 
         echo $store >> BASHTE/$lines.txt
