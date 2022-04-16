@@ -18,7 +18,7 @@ echo "################################################################"
 
 
 while true
-do
+do  lines=$(wc -l tempfile.txt)
     read -p "$lines >" store
     if [ "$store" = "\\:q" ]
     then
