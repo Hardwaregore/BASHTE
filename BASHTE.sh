@@ -38,7 +38,8 @@ do
 
     elif [ "$store" = "\\:dd" ]
     then
-    rm -rf BASHTE/$lines
+    (($lines--))
+    rm -rf BASHTE/$lines-1
     else
 
         echo $store >> BASHTE/$lines.txt
@@ -53,7 +54,8 @@ done
 
 
 
-
+# subtracts 1 from the number of lines
+((lines--))
 
 
 
