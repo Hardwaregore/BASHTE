@@ -42,7 +42,7 @@ do
 done
 
 # counts the number of lines in the file
-lines=$(wc -l tempfile.txt | cut -d " " -f 1)
+lines=$(wc -l tempfile.txt)
 
 
 
