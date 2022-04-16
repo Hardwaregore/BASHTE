@@ -19,7 +19,7 @@ echo "################################################################"
 
 while true
 do
-    read -p ">" store
+    read -p "$lines >" store
     if [ "$store" = "\\:q" ]
     then
         break
@@ -40,6 +40,11 @@ do
         echo $store >> tempfile.txt
     fi
 done
+
+# counts the number of lines in the file
+lines=$(wc -l $file | cut -d " " -f 1)
+
+
 
 
 
