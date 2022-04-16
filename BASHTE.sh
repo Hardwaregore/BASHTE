@@ -24,10 +24,10 @@ do
         break
     elif [ "$store" = "\\:w" ]
     then
-        cat BASHTE/* >> $file
+        ls BASHTE/* | sort -n | xargs cat >> $file
     elif [ "$store" = "\\:wq" ]
     then
-        cat BASHTE/* >> $file
+        ls BASHTE/* | sort -n | xargs cat >> $file
         rm -rf .$file
         break
     elif [ "$store" = "\\:q!" ]
