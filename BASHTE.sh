@@ -23,17 +23,21 @@ do
         break
     elif [ "$store" = "\\:w" ]
     then
-        cat .BASHTE/* >> $file
+        cat BASHTE/* >> $file
     elif [ "$store" = "\\:wq" ]
     then
-        cat .$file >> $file
+        cat BASHTE/* >> $file
         rm -rf .$file
         break
     elif [ "$store" = "\\:q!" ]
     then
-        rm -rf .$file
+        rm -rf BASHTE
         rm -rf $file
         break
+
+    elif [ "$store" = "\\:dd" ]
+    then
+    rm -rf BASHTE/$lines
     else
 
         echo $store >> BASHTE/$lines.txt
@@ -47,10 +51,8 @@ done
 
 
 
-# | cut -d " " -f 1
 
-# counts the amount of files in the directory
-ls -1 | wc -l
+
 
 
 
