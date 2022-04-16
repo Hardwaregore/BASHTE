@@ -1,16 +1,15 @@
 #!/bin/bash
 clear
 echo "###############################################################################"
-echo "#  BASHTE TEXT EDITOR -  \\\ = interupt  :q = quit  :w = write                #"
+echo "#  BASHTE TEXT EDITOR -  \\\ = interupt  :q = quit  :w = write                 #"
 echo "#  :wq = Write and quit  :q! = quit and discard  :dd = Delete Previous line   #"
 echo "###############################################################################"
 echo ""
 read -p "Enter file name: " file
-touch $file
-touch .BASHTE
+touch .$file
 clear
 echo "###############################################################################"
-echo "#  BASHTE TEXT EDITOR -  \\\ = interupt  :q = quit  :w = write                #"
+echo "#  BASHTE TEXT EDITOR -  \\\ = interupt  :q = quit  :w = write                 #"
 echo "#  :wq = Write and quit  :q! = quit and discard  :dd = Delete Previous line   #"
 echo "###############################################################################"
 
@@ -27,16 +26,17 @@ do  lines=$(wc -l .BASHTE)
         cat .BASHTE/* >> $file
     elif [ "$store" = "\\:wq" ]
     then
-        cat .BASHTE >> $file
-        rm -rf .BASHTE
+        cat .$file >> $file
+        rm -rf .$file
         break
     elif [ "$store" = "\\:q!" ]
     then
-        rm -rf .BASHTE
+        rm -rf .$file
         rm -rf $file
         break
     else
-        echo $store >> .BASHTE
+        echo $store >> .$file
+        cat .BASHTE >> BASHTE
     fi
 done
 
