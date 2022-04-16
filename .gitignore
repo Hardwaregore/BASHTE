@@ -1,7 +1,0 @@
-
-# ignore the .gitignore file
-git add .gitignore
-# ignore the catfile.txt file
-git add catfile.txt
-# ignore the testing.sh file
-git add testing.sh
