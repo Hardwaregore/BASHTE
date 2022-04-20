@@ -19,6 +19,7 @@ echo "##########################################################################
 
 while true
 do  
+    ((lines++))
     read -p "$lines >" store
     if [ "$store" = "\\:q" ]
     then
@@ -45,7 +46,7 @@ do
 
         echo $store >> ~/BASHTE/$lines.txt
         # counts the number of times the while loop is run
-        ((lines++))
+        
     fi
 done
 
